@@ -87,7 +87,7 @@ nav .menu ul li:nth-child(6) a {
   padding: 10px 22px;
 }
 
-main .main {
+main .hero {
   height: 400px;
   background-color: var(--mian-color-2);
   display: flex;
@@ -95,23 +95,23 @@ main .main {
   align-items: center;
 }
 
-main .main .contant p:first-child {
+main .hero .contant p:first-child {
   color: var(--main-color);
   font-size: 44.55px;
   font-weight: 600;
 }
 
-main .main .contant p:first-child span {
+main .hero .contant p:first-child span {
   color: var(--primary-color);
 }
 
-main .main .contant p:nth-child(2) {
+main .hero .contant p:nth-child(2) {
   font-size: 11.14px;
   font-weight: 400;
   color: var(--main-color-3);
 }
 
-main .main .contant a {
+main .hero .contant a {
   color: #fff;
   display: inline-block;
   background-color: var(--primary-color);
@@ -121,43 +121,43 @@ main .main .contant a {
   padding: 10px 22px;
 }
 
-main .clint {
+main .our-clients {
   margin: 10px 0;
 
   text-align: center;
 }
 
-main .clint .clint-img {
+main .our-clients .clint-img {
   margin: 10px 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-main .clint p,
+main .our-clients p,
 h2 {
   padding: 10px;
 }
 
-main .clint p {
+main .our-clients p {
   font-size: 11.14px;
   font-weight: 400;
   color: var(--main-color-3);
 }
 
-main .clint h2 {
+main .our-clients h2 {
   color: var(--main-color);
   font-size: 25px;
   font-weight: 600;
 }
 
-main .mange {
+main .membership-management {
   margin-top: 25px;
   text-align: center;
 
 }
 
-main .mange p:first-child {
+main .membership-management p:first-child {
   margin-top: 13px;
   font-size: 25px;
   font-weight: 600;
@@ -165,78 +165,70 @@ main .mange p:first-child {
   padding: 10px;
 }
 
-main .mange p:nth-child(2) {
+main .membership-management p:nth-child(2) {
   font-size: 11px;
   font-weight: 400;
   color: var(--main-color-3);
   padding: 10px;
 }
 
-main .mange .box {
+main .membership-management .box {
 
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-main .mange .box .cotant .img-1 {
+main .membership-management .box .cotant .img-1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
-main .mange .box .cotant p:nth-child(2) {
+main .membership-management .box .cotant p:nth-child(2) {
   font-size: 25px;
   font-weight: bold;
   color: var(--main-color);
   margin-bottom: 5px;
 }
 
-main .mange .box .cotant p:nth-child(3) {
+main .membership-management .box .cotant p:nth-child(3) {
   font-size: 10px;
   font-weight: 400;
   color: var(--main-color-3);
 
 }
 
-main .design {
-  margin-top: 40px;
+main .experience {
+  margin-top: 60px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 60px;
-
 }
 
-main .design .img-design {
+main .experience .img-experience {
   height: 300px;
   width: 300px;
 
 }
 
-main .design .img-design img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-main .design .contant p:first-child {
+main .experience .contant p:first-child {
   font-size: 25px;
   font-weight: 600;
   color: var(--main-color);
   padding: 15px 0;
 }
 
-main .design .contant p:nth-child(2) {
+main .experience .contant p:nth-child(2) {
   font-size: 15px;
   font-weight: 400;
   color: var(--main-color-3);
   padding: 15px 0;
 }
 
-main .design .contant a {
+main .experience .contant a {
   display: inline-block;
   background-color: var(--primary-color);
   color: #fff;
@@ -244,4 +236,58 @@ main .design .contant a {
   font-weight: 500;
   font-size: 11px;
   border-radius: 5px;
+}
+
+main .company-stats {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+  justify-content: space-evenly;
+  background-color: var(--mian-color-2);
+}
+
+main .company-stats .stats-description h2 {
+  font-weight: 600;
+  color: var(--main-color);
+  font-size: 30px;
+  padding: 0;
+}
+
+main .company-stats .stats-description p {
+  color: var(--main-color-3);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+main .company-stats .stats-description h2 span {
+  color: var(--primary-color);
+}
+
+main .company-stats .stats-data {
+  width: 20%;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+main .company-stats .stats-data .contant p:first-child {
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 15px;
+}
+
+main .company-stats .stats-data .contant p:last-child {
+  font-weight: 400;
+  color: var(--main-color-3);
+  font-size: 10px;
+}
+
+
+main .company-stats .stats-data>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /*  يعني اعمل جااب بين الابناء */
 }

@@ -52,10 +52,11 @@ h6 {
 }
 
 :root {
-  --mian-color-2: #f5f7fa;
+  --main-color-2: #f5f7fa;
   --main-color: #4d4d4d;
   --main-color-3: #717171;
   --primary-color: #4caf4f;
+  --main-color-d: #263238;
 }
 
 nav {
@@ -76,10 +77,25 @@ nav .menu ul {
   gap: 18px;
 }
 
-nav .menu ul a {
+nav .menu ul a:link:not(.active),
+nav .menu ul li a:visited {
   color: var(--main-color);
+  transition: all 0.72s ease;
 }
 
+nav .menu ul a.active {
+  color: var(--primary-color) !important;
+  transition: all 0.72s ease;
+}
+
+nav .menu ul li a:hover {
+  padding: 15px;
+  border-radius: 15px;
+  background-color: var(--main-color-2);
+  color: var(--primary-color);
+}
+
+/* شوف قصة السلكتور معهم */
 nav .menu ul li:nth-child(6) a {
   color: #fff;
   background-color: var(--primary-color);
@@ -89,7 +105,7 @@ nav .menu ul li:nth-child(6) a {
 
 main .hero {
   height: 400px;
-  background-color: var(--mian-color-2);
+  background-color: var(--main-color-2);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -118,11 +134,24 @@ main .hero .contant a {
   font-size: 11.14px;
   font-weight: 500;
   margin-top: 22px;
+  border-radius: 10px;
   padding: 10px 22px;
+  transition: all 0.75s ease;
+}
+
+main .hero .contant a:hover,
+main .experience .contant a:hover,
+main .footer-design .footer-description a:hover,
+main .final a:hover {
+
+  color: var(--primary-color);
+  background-color: #eee;
+  box-shadow: 0 0 20px #ffffff;
+
 }
 
 main .our-clients {
-  margin: 10px 0;
+  margin: 75px 0;
 
   text-align: center;
 }
@@ -152,7 +181,7 @@ main .our-clients h2 {
 }
 
 main .membership-management {
-  margin-top: 25px;
+  margin-top: 75px;
   text-align: center;
 
 }
@@ -202,7 +231,7 @@ main .membership-management .box .cotant p:nth-child(3) {
 }
 
 main .experience {
-  margin-top: 60px;
+  margin-top: 75px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -232,19 +261,21 @@ main .experience .contant a {
   display: inline-block;
   background-color: var(--primary-color);
   color: #fff;
-  padding: 10px 15px;
+  padding: 15px 20px;
+  font-size: 15px;
   font-weight: 500;
-  font-size: 11px;
+  margin-top: 10px;
   border-radius: 5px;
+  transition: all 0.75s ease;
 }
 
 main .company-stats {
-  margin-top: 20px;
+  margin-top: 75px;
   display: flex;
   align-items: center;
   padding: 60px 0;
   justify-content: space-evenly;
-  background-color: var(--mian-color-2);
+  background-color: var(--main-color-2);
 }
 
 main .company-stats .stats-description h2 {
@@ -290,4 +321,162 @@ main .company-stats .stats-data>div {
   justify-content: center;
   gap: 10px;
   /*  يعني اعمل جااب بين الابناء */
+}
+
+main .footer-design {
+  margin-top: 75px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main .footer-design .footer-description h2 {
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+main .footer-design .footer-description p {
+  color: var(--main-color-3);
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+main .footer-design .footer-description a {
+  color: #fff;
+  transition: all 0.75s ease;
+  background-color: var(--primary-color);
+  padding: 15px 20px;
+  font-size: 15px;
+
+  font-weight: 500;
+
+  border-radius: 5px;
+}
+
+main .art {
+  background-color: var(--main-color-2);
+  margin-top: 75px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px;
+  /* ليش لما حطيتها صار هيك */
+  /* align-items: center; */
+}
+
+main .art .img-art img {
+  max-height: 100%;
+}
+
+main .art .description-art p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--main-color-3);
+
+}
+
+main .art .description-art h2 {
+  font-size: 18px;
+  padding: 7px 0;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+main .art .description-art .icons a {
+  font-size: 10px;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: all 0.75s ease;
+}
+
+main .art .description-art .icons a:hover {
+  color: var(--main-color);
+}
+
+main .art .description-art .icons {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .last {
+  margin-top: 75px;
+  text-align: center;
+}
+
+main .last h2 {
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+main .last p {
+  font-weight: 400;
+  color: var(--main-color-3);
+}
+
+main .last .design-last {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main .last .design-last .img-last-1 {
+  display: grid;
+
+  place-items: center;
+
+}
+
+main .last .design-last .img-last-1 .descraption {
+  /* هاي هي الصححححححححححححححححححححححححححححححححححح يكون 90 بالميه من حجم الصورة */
+  width: 90%;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--main-color-2);
+  /* margin: -25% auto 0; */
+  /* وممكن كنت اعمل توسيط للديف بدون ما استخدم الجريد بس استخدمتها علشان تعرف هاي الخاصية */
+  margin-top: -25%;
+  color: var(--main-color-3);
+  font-weight: 600;
+  font-size: 15px;
+
+}
+
+main .last .design-last .img-last-1 .descraption p {
+  font-size: 11px;
+}
+
+main .last .design-last .img-last-1 .descraption a {
+  display: inline-block;
+  color: var(--primary-color);
+  margin-top: 10px;
+}
+
+main .final {
+  background-color: var(--main-color-2);
+  text-align: center;
+  margin-top: 75px;
+  padding: 50px;
+}
+
+main .final p {
+
+  color: var(--main-color-d);
+  font-size: 50px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+
+main .final a {
+  color: #fff;
+  transition: all 0.75s ease;
+  background-color: var(--primary-color);
+  padding: 15px 20px;
+  font-size: 15px;
+  font-weight: 500;
+
+  border-radius: 5px;
 }

@@ -480,3 +480,38 @@ main .final a {
 
   border-radius: 5px;
 }
+
+footer .continer {
+  background-color: var(--main-color-d);
+  margin-top: 75px;
+  display: flex;
+
+  justify-content: space-evenly;
+  padding: 21px 55px;
+}
+
+footer .continer .div2 {
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer .continer .div1 img {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+footer .continer .div1>p {
+  line-height: 2;
+  color: #fff;
+  font-weight: 400;
+  font-size: 15px;
+
+}
+
+footer .continer .div1 img {
+  background-color: var(--main-color);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}

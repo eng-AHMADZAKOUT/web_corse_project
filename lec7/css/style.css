@@ -1,0 +1,22 @@
+body{
+    margin:0;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    /* background-color: aquamarine; */
+    /* margin: 20px 40px; */
+    margin-bottom: 20px;
+}
+.container{
+    /* background-color: brown; */
+    /* width: 600px; */
+    width: 80%;
+    /* margin-left: 10%; */
+    margin: 0 auto;  /*بدون حسابات لحالها بتعمله توسيط عن الجوانب*/
+}
+#box1{
+    border: 2px solid #d95;
+    border-radius: 50%;
+}

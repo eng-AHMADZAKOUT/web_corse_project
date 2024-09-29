@@ -1,5 +1,7 @@
+/* Import Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+/* Base styles */
 *,
 ::before,
 ::after {
@@ -51,6 +53,7 @@ h6 {
   overflow-wrap: break-word;
 }
 
+/* Root colors */
 :root {
   --main-color-2: #f5f7fa;
   --main-color: #4d4d4d;
@@ -59,10 +62,10 @@ h6 {
   --main-color-d: #263238;
 }
 
+/* Navbar */
 nav {
   width: 80%;
   margin: 0 auto;
-
   padding: 20px;
 }
 
@@ -95,7 +98,7 @@ nav .menu ul li a:hover {
   color: var(--primary-color);
 }
 
-/* شوف قصة السلكتور معهم */
+/* Special styles for the sixth menu item */
 nav .menu ul li:nth-child(6) a {
   color: #fff;
   background-color: var(--primary-color);
@@ -103,6 +106,7 @@ nav .menu ul li:nth-child(6) a {
   padding: 10px 22px;
 }
 
+/* Hero section */
 main .hero {
   height: 400px;
   background-color: var(--main-color-2);
@@ -143,16 +147,14 @@ main .hero .contant a:hover,
 main .experience .contant a:hover,
 main .footer-design .footer-description a:hover,
 main .final a:hover {
-
   color: var(--primary-color);
   background-color: #eee;
   box-shadow: 0 0 20px #ffffff;
-
 }
 
+/* Clients section */
 main .our-clients {
   margin: 75px 0;
-
   text-align: center;
 }
 
@@ -180,15 +182,15 @@ main .our-clients h2 {
   font-weight: 600;
 }
 
+/* Membership management section */
 main .membership-management {
   margin-top: 75px;
   text-align: center;
-
 }
 
 main .membership-management p:first-child {
   margin-top: 13px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--main-color);
   padding: 10px;
@@ -201,8 +203,12 @@ main .membership-management p:nth-child(2) {
   padding: 10px;
 }
 
-main .membership-management .box {
+main .membership-management .box .box1 {
+  margin: 0.5%;
+  width: 32%;
+}
 
+main .membership-management .box {
   margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
@@ -217,7 +223,7 @@ main .membership-management .box .cotant .img-1 {
 }
 
 main .membership-management .box .cotant p:nth-child(2) {
-  font-size: 25px;
+  font-size: 1.0625rem;
   font-weight: bold;
   color: var(--main-color);
   margin-bottom: 5px;
@@ -227,9 +233,9 @@ main .membership-management .box .cotant p:nth-child(3) {
   font-size: 10px;
   font-weight: 400;
   color: var(--main-color-3);
-
 }
 
+/* Experience section */
 main .experience {
   margin-top: 75px;
   display: flex;
@@ -240,7 +246,6 @@ main .experience {
 main .experience .img-experience {
   height: 300px;
   width: 300px;
-
 }
 
 main .experience .contant p:first-child {
@@ -269,6 +274,7 @@ main .experience .contant a {
   transition: all 0.75s ease;
 }
 
+/* Company stats section */
 main .company-stats {
   margin-top: 75px;
   display: flex;
@@ -314,15 +320,14 @@ main .company-stats .stats-data .contant p:last-child {
   font-size: 10px;
 }
 
-
 main .company-stats .stats-data>div {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  /*  يعني اعمل جااب بين الابناء */
 }
 
+/* Footer section */
 main .footer-design {
   margin-top: 75px;
   display: flex;
@@ -350,20 +355,17 @@ main .footer-design .footer-description a {
   background-color: var(--primary-color);
   padding: 15px 20px;
   font-size: 15px;
-
   font-weight: 500;
-
   border-radius: 5px;
 }
 
+/* Art section */
 main .art {
   background-color: var(--main-color-2);
   margin-top: 75px;
   display: flex;
   justify-content: space-evenly;
   padding: 50px;
-  /* ليش لما حطيتها صار هيك */
-  /* align-items: center; */
 }
 
 main .art .img-art img {
@@ -374,7 +376,6 @@ main .art .description-art p {
   font-size: 15px;
   font-weight: 400;
   color: var(--main-color-3);
-
 }
 
 main .art .description-art h2 {
@@ -402,6 +403,7 @@ main .art .description-art .icons {
   align-items: center;
 }
 
+/* Last section */
 main .last {
   margin-top: 75px;
   text-align: center;
@@ -425,24 +427,18 @@ main .last .design-last {
 
 main .last .design-last .img-last-1 {
   display: grid;
-
   place-items: center;
-
 }
 
 main .last .design-last .img-last-1 .descraption {
-  /* هاي هي الصححححححححححححححححححححححححححححححححححح يكون 90 بالميه من حجم الصورة */
   width: 90%;
   padding: 15px;
   border-radius: 10px;
   background-color: var(--main-color-2);
-  /* margin: -25% auto 0; */
-  /* وممكن كنت اعمل توسيط للديف بدون ما استخدم الجريد بس استخدمتها علشان تعرف هاي الخاصية */
   margin-top: -25%;
   color: var(--main-color-3);
   font-weight: 600;
   font-size: 15px;
-
 }
 
 main .last .design-last .img-last-1 .descraption p {
@@ -455,6 +451,7 @@ main .last .design-last .img-last-1 .descraption a {
   margin-top: 10px;
 }
 
+/* Final section */
 main .final {
   background-color: var(--main-color-2);
   text-align: center;
@@ -463,7 +460,6 @@ main .final {
 }
 
 main .final p {
-
   color: var(--main-color-d);
   font-size: 50px;
   font-weight: bolder;
@@ -477,15 +473,14 @@ main .final a {
   padding: 15px 20px;
   font-size: 15px;
   font-weight: 500;
-
   border-radius: 5px;
 }
 
+/* Footer container */
 footer .continer {
   background-color: var(--main-color-d);
   margin-top: 75px;
   display: flex;
-
   justify-content: space-evenly;
   padding: 21px 55px;
 }
@@ -506,7 +501,6 @@ footer .continer .div1>p {
   color: #fff;
   font-weight: 400;
   font-size: 15px;
-
 }
 
 footer .continer .div1 img {
@@ -514,4 +508,102 @@ footer .continer .div1 img {
   height: 15px;
   width: 15px;
   border-radius: 50%;
+}
+
+/* Responsive Styles */
+/* تعديلات الـ Media Queries للأجهزة الصغيرة */
+
+/* شاشات أقل من 768px */
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    padding: 15px;
+  }
+
+  nav .menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    /* تقليل المسافات بين العناصر */
+  }
+
+  main .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  main .hero .contant p:first-child {
+    font-size: 30px;
+    /* تقليل حجم الخط */
+  }
+
+  main .experience,
+  main .company-stats,
+  main .footer-design,
+  main .membership-management .box,
+  main .art {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  main .membership-management .box .box1,
+  main .company-stats .stats-data,
+  main .our-clients .clint-img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  main .experience .img-experience,
+  main .company-stats .stats-data>div {
+    width: 100%;
+  }
+
+  main .company-stats {
+    padding: 30px 0;
+    /* تقليل التباعد العلوي والسفلي */
+  }
+
+  footer .continer {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  footer .continer .div1,
+  footer .continer .div2 {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* شاشات أقل من 480px */
+@media (max-width: 480px) {
+  main .hero .contant p:first-child {
+    font-size: 24px;
+    /* تقليل حجم الخط أكثر */
+  }
+
+  main .final p {
+    font-size: 28px;
+    /* تعديل حجم الخط للنص النهائي */
+  }
+
+  main .final a,
+  main .hero .contant a {
+    padding: 8px 12px;
+    /* تقليل حجم الأزرار */
+    font-size: 12px;
+  }
+
+  nav .menu ul {
+    gap: 5px;
+    /* تقليل المسافات بين عناصر القائمة أكثر */
+  }
+
+  main .hero .contant p:nth-child(2) {
+    font-size: 10px;
+    /* تقليل حجم النص الثاني في الهيرو */
+  }
 }

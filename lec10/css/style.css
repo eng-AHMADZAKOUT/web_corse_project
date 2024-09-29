@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding-top: 48px;
+    /* عشان الهيدر ركب فوق البودي, ما بدي ياكل منه فبشوف ارتفاع الهيدر وبعمل بادينج من البودي على قده */
+    height: 2000px;
+    /*عشان يطلعلي سكرول واشوف تأثير البوزيشين*/
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.grid-panel {
+    display: grid;
+    /* grid-template-columns: 100px 200px 300px; بدي احط عرض كل عمود على كيفي*/
+    /* grid-template-columns: 1fr 1fr 1fr; بدي اقسم المساحة لاعمدة متساوية*/
+    /* grid-template-columns: 200px 1fr;  عمود عرضه محدد والتاني يعبي باقي المساحة */
+    /* grid-template-rows: 200px 1fr; */
+    grid-template-areas:
+        "a1 a1 a5"
+        "a2 a3 a5"
+        "a2 a4 a5";
+    gap: 10px;
+    /*تعمل مسافات بين الديفات*/
+}
+
+.grid-panel div {
+    min-height: 100px;
+    /*عشان الديف الي ماخدة اكتر من خلية بالطول, تقدر تكبر طولها على حسبب عدد الخلابا*/
+    background-color: #e991d7;
+}
+
+.grid-panel div:nth-child(1) {
+    grid-area: a1;
+}
+
+/*لتسمية الديفات*/
+.grid-panel div:nth-child(2) {
+    grid-area: a2;
+}
+
+.grid-panel div:nth-child(3) {
+    grid-area: a3;
+}
+
+.grid-panel div:nth-child(4) {
+    grid-area: a4;
+}
+
+.grid-panel div:nth-child(5) {
+    grid-area: a5;
+}
+
+.content {
+    position: sticky;
+    /*بتمسك وبتضل ظاهرة خلال الاب */
+    /*لما نعمل سكرول بيضل ينزل لحد ما البيرنت تبعه يخلص*/
+    top: 50px;
+    /*بحدد الموقع الي تتواجد فيه طول ما انا بعمل سكرول في نطاق الأب*/
+}
+
+/*position*/
+/*لو بدي اعمل اي تاغ واتحكم بمكانه على كيفي بشكل مش معتاد , الحل بوزيشين*/
+/*Position: 
+static: , هي القيمة الافتراضية الموجودة مع كل العناصر, وما بيتحرك
+fixed: لما اعمل سكرول, العنصر ثابت مع الشاشة,وبكون محدداله موقع بالشاشة وخلص
+sticky: لما اعمل سكرول, بيضل ينزل لحد ما البيرنت تبعه يخلص
+absolute: بنحدد للعنصر موقع بالنسبة للأب الريلاتيف تبعه(بدي يضل ضمن حدود الاب الريلاتيف تبعه) وما بيتحرك 
+لو سالني على وين بدك يكون موضع العنصر الجديد؟ الجواب بنختار توب , رايت, ليفت, بوتوم
+*/
+/*relative: */
+
+header {
+    padding: 15px 30px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 10px #b4b4b4;
+    position: fixed;
+    /*صار كأنه مش موجود من ضمن البودي, مسك(ركب) الشاشة في مكانه , فالجريد طلع لفوق وهو صار فوقه طاير*/
+    /*بنلاحظ انه عرضه صغر وهاد لانه كل عنصر بياخد بوزيشين, بيتحول انلاين بلوك*/
+    top: 0;
+    /*بعد ما عملت بادينج للبودي, رجعت هاد فوق(غيرت موقعه بالشاشة)*/
+    width: 100%;
+    /*عشان ارجعه نفس عرض الصفحة*/
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav .menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+header nav .menu ul li {
+    margin: 0 15px;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+}
+
+.back-top {
+    display: flex;
+    /*عشان اقدر اتحكم بالطول والعرض, واتحكم بموقع الكلمة بالنسبة للمربع(اسنترها بالطول والعرض)*/
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    background-color: hsl(318, 72%, 27%);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px 10px 0 0;
+    /*بدي يكون دائري من زوايا معينة بس*/
+    transition: all .4s ease;
+    position: fixed;
+    /*هتمسك بالشاشة مكانها, واي عنصر تحتيه هيطلع فوق*/
+    /* bottom: 20px; /*بدي اغير موقعه بالشاشة(احطه تحت على اليمين)
+    right: 20px; */
+
+    /*لو بدي المربع ييجي بنص الشاشة تحت*/
+    bottom: -40px;
+    left: 50%;
+    /*هاد بيخلي الحد تبع الشمال هو الي بادي من النص*/
+    margin-left: -50px;
+    /*بسحبه بالعكس قد نص عرضه, عشان تيجي الكلمة هي الي بالنص*/
+    /*هاد الزر لو كان ضمن البودي(مش فيكسد) كان المارجين أثر على كل عناصر الصفحة, عشان هيك دايما بنفضل الترانزليت*/
+    /* transform: translateX(-50%);  طريقة اخرى للسحب*/
+}
+
+.back-top:hover {
+    background-color: #e991d7;
+    bottom: 0;
+    /*يكون متخبي واول ما اعمل هوفر , يطلع لفوق*/
+}
+
+.social {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    /*بدي اسحبه بالعكس قد نص طوله, بس انا مش عارفة قديش طوله, وممكن اضل اضيف ايقونات وطوله يتغير, فهادي اشمل من المارجين*/
+}
+
+.social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 1px;
+    color: white;
+}
+
+.social a.fb {
+    background-color: #3b5998;
+}
+
+.social a.tw {
+    background-color: #1da1f2;
+}
+
+.social a.li {
+    background-color: #0a66c2;
+}
+
+.social a.ut {
+    background-color: #ff0000;
+}
+
+.social a.in {
+    background-color: #c32aa3;
+}
+
+.social a.sc {
+    background-color: #fffc00;
+}
+
+.social a.tt {
+    background-color: #010101;
+}
+
+
+
+
+.person {
+    width: 300px;
+    background-color: rgb(233, 228, 228);
+    text-align: center;
+    padding-bottom: 15px;
+    margin-top: 40px;
+}
+
+.person img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    /*السبب انه لما حطينا اللينك فوقها, لقيناه زايد عن طولها, وهاد لانه اي عنصر انلاين تلقائي بيكون في مسافة صغيرة بينه وبين العنصر الي بعده فاللينك غطا مساحة الصورة والمسافة الي بعدها كمان, عشان هيك حولناه لبلوك عشان تروح المسافة*/
+}
+
+.person h2,
+p {
+    margin: 0;
+}
+
+.img-wrapper {
+    position: relative;
+}
+
+.img-wrapper .social-links {
+    position: absolute;
+    /*يعني مكان العنصر يكون بالنسبة لعنصر معين , فبعمل الأب ريلاتيف يعني بالنسبة اله*/
+    background-color: rgba(178, 174, 174, .5);
+    width: 100%;
+    height: 100%;
+    /*عشان ياخد نفس حجم الاب ايميج رابار , والايميج رابار حجمها نفس الايميج لانها ديف فبتاخد حجم الي جواها لو ما حددنالها هي حجم*/
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* display: none; ممكن نكتب هيك عشان نخليها لما نعمل هوفر احولها فليكس وتظهر, لكن المشكلة بقدرش اعمل ترانزيشين لخاصية الديسبلاي, فهيكون الاختفاء والظهور منظره غبي*/
+
+    /*هان طريقة تانية للاختفاء والظهور*/
+    opacity: 0;
+    /*العنصر بيصير شفاف لكن سليكتابول يعني لو لينك فبينفع ينضغط عليه*/
+    visibility: hidden;
+    /*خفيت رؤيته*/
+    transition: all 0.4s ease;
+}
+
+.person:hover .img-wrapper .social-links {
+    /*يعني لما اعمل هوفر على ديف البيرسون كله, خليلي السوشال لينكس كزا كزا*/
+    /* display: flex; */
+    opacity: 1;
+    visibility: visible;
+}
+
+.img-wrapper .social-links a {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(233, 228, 228);
+    color: black;
+    margin: 0 2px;
+    line-height: 30px;
+    /*طريقة قديمة  لتوسيط الكلام بنص المربع, بدل فليكس*/
+    font-size: 12px;
+}

@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #f26d5a;
+}
+
+.div1 {
+    padding: 20px;
+}
+
+.product {
+    margin-bottom: 50px;
+}
+
+.product p {
+    display: none;
+    /*نون يعني بدي العنصر يضل موجود ومنسق ومخفي لاستخدامه فيما بعد, في هاد المثال بدي النص يضل مخفي لحد ما يضغط على البوتون*/
+}
+
+ul {
+    margin: 0;
+    /*لانه اليو أل الها تلقائي مارجن 16بكسل من فوق وتحت*/
+    padding: 0;
+    /*معاها تلقائي بادينج 40 بكسل من اليسار*/
+}
+
+ul li {
+    display: inline;
+}
+
+ul li ::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #f26d5a;
+    display: inline-block;
+}
+
+/* ul li span{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #f26d5a;
+    display: inline-block;
+} */
+.item {
+    width: 25%;
+    margin: 100px;
+    /* margin-right: 0; */
+    box-shadow: 0 0 10px #dadada;
+    /*زي البوردر بس احلى منه*/
+    /* background-color:red; */
+    overflow: hidden;
+    /*يعني العناصر الي طلعت برة العنصر هاد , اخفيها*/
+    /* فلما بعمل هوفر على اي اشي وبكون عامله يكبر, لما بيكبر ما بيطلع لبرة */
+}
+
+.item .content {
+    padding: 20px;
+}
+
+.item .image {
+    height: 200px;
+    overflow: hidden;
+    /* حطيتها جوة ديف ومنعت الخروج عنه, عشان لما اعمل هوفر, ما تكبر من تحت كمان*/
+}
+
+.item img {
+    /*اي صورة لو المكان الي هيا فيه بيكفيها (كان بها) ولو ما بيكفيها (بتطلع برة تلقائي) */
+
+    width: 100%;
+    /*يعني نفس عرض البيرنت, فلما نعمل زوم ان والبيرنت تبعها يصغر, هي تصغر كمان معاه زيها زي البيرنت*/
+
+    height: 200px;
+    object-fit: cover;
+    transition: all .5s ease;
+}
+
+.item img:hover {
+    transform: scale(1.2) rotate(5deg);
+    /*الحركات الي بدنا ياها*/
+}
+
+.item a {
+    text-decoration: none;
+    color: black;
+}
+
+.item .btn {
+    background-color: hwb(323 22% 22%);
+    color: white;
+    display: block;
+    /*عشان لما اضغط على اي مكان بالسطر كله يصير كاني ضغطت على الرابط نفسه*/
+    text-align: center;
+    padding: 5px;
+
+    transition: all .5s ease;
+    /*بحطها هان عشان مش بس عند الهوفر يتاثر, بردو عشان لما اشيل الماوس يتأثر كمان*/
+    /*كلمة ألل يعني كل اشي حاطه بالهوفر هيتأثر بهاد التحويل , ممكن احط بدل ألل صفة وحدة بكتب اسمها*/
+}
+
+.item .btn:hover {
+    background-color: #f1cff3;
+    text-decoration: underline;
+    color: black;
+}

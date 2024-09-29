@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    margin:0;
+    height: 100vh;  /*عملت طول البودي قد طول الشاشة عشان لما احط الصورة بنص البودي , تيجي بنص الشاشة*/
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    /*هيك صارت بنص الشاشة*/
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.price-plan{
+    width: 20%;
+    position: relative;
+}
+
+.price-plan .price{
+    background-color: #3F28AC;
+    padding: 30px;
+    color: white;
+    border-radius: 15px;
+}
+.price-plan .price h5{
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.price-plan .price h2{
+    margin-top: 0;
+}
+.price-plan .price h2 span{
+    font-size: 40px;
+}
+
+.price-plan .features{
+    width: 95%;
+    box-shadow: 0 0 10px #0000004b;
+    padding: 30px 20px;
+    margin: -35px auto 0;
+    background-color: white;
+    border-radius: 15px;
+}
+.price-plan .features ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.price-plan .features ul li{
+    margin-bottom: 20px;
+}
+.price-plan .features ul li i{
+    color: rgb(111, 239, 111);
+    margin-right: 10px;
+}
+.price-plan .features a{
+    color:#3F28AC;
+    border: 2px solid #3F28AC;
+    padding: 10px 25px;  /*مش هنعمل ويدث وهايت لانه انلاين مش بلوك*/
+    /* والبادينج من فوق وتحت لو كبرناه هيتداخل مع العناصر هان لانه انلاين */
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;  /*لانه بيتداخل مع الي فوقه لما كان انلاين*/ 
+    margin-top: 10px;  /*بعد ما حولته انلاين بلوك ,بقدر اعمل مارجين من فوق وتحت عادي
+    وهو انلاين بقدرش اعمل مارجين من فوق وتحت*/
+
+    /*شرحت الانلاين بالدفتر احسن*/
+}
+
+.price-plan .icon{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #3F28AC;
+    box-shadow: 0 0 10px #0000004b;
+    border-radius: 10px;
+    position: absolute;
+    font-size: 22px;
+    top: 0;
+    right: 20px;
+    transform: translateY(-50%);
+}

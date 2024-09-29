@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    /* background-color: hwb(230 75% 18%); */
+    background-image: url(../images/Screenshot\ 2024-09-18\ 164420.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form{
+    width:300px;
+    background-color: white;
+    margin: 10% auto 0;
+    padding: 30px;
+}
+form h2{
+    margin-top: 0;
+}
+form input{
+    display: block;
+    width: 100%;
+    outline: none;
+    border: 1px solid #999;
+    padding: 5px 10px;
+}
+form div{
+    margin-bottom: 10px;
+}
+form button{
+    width: 100%;
+    background-color: #135669;
+    color: white;
+    border: 0;
+    padding: 5px 10px;
+}

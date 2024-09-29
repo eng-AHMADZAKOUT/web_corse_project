@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Layout Design</title>
+    <style>
+      /* Reset basic styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      /* Header Styling */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #262673;
+        color: white;
+      }
+
+      .header nav ul {
+        display: flex;
+        list-style: none;
+        gap: 15px;
+      }
+
+      .header nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      /* Hero Section */
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 50px;
+        background-color: #f4f4f4;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      .hero-text p {
+        color: #777;
+        margin-bottom: 20px;
+      }
+
+      .hero img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      /* Section for the two cards (Goal Section) */
+      .goal-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 50px;
+      }
+
+      .goal-section .card {
+        background-color: #ffffff;
+        padding: 30px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+
+      .goal-section .card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+
+      .goal-section .card p {
+        color: #777;
+      }
+
+      /* Process Section */
+      .process-section {
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      .process-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+      }
+
+      .process-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .process-cards .card {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .process-cards .card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+
+      .process-cards .card p {
+        color: #777;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #262673;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <header class="header">
+        <div class="logo">[Logo]</div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Our designs solve problems</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta,
+            expedita.
+          </p>
+        </div>
+        <div class="hero-image">
+          <img src="https://via.placeholder.com/500x400" alt="About Us" />
+        </div>
+      </section>
+
+      <!-- Goal Section (Two Cards) -->
+      <section class="goal-section">
+        <div class="card">
+          <h2>Goal Focused</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident,
+            perferendis.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Continuous Improvement</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita,
+            doloremque.
+          </p>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section class="process-section">
+        <h2>The process we follow</h2>
+        <div class="process-cards">
+          <div class="card">
+            <h3>Planning</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="card">
+            <h3>Conception</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="card">
+            <h3>Design</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="card">
+            <h3>Development</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <p>&copy; 2024 Your Company Name</p>
+      </footer>
+    </div>
+  </body>
+</html>

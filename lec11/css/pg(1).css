@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: "Playwrite DE Grund", cursive;
+}
+body{
+    margin: 0;
+}
+img, video{
+    max-width: 100%;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hero{
+    position: relative;
+}
+
+.hero:before{  /*بيعمل عنصر وهمي(طبقة بلون معين) قبل الهيرو*/
+    /*ممكن نعملها بديف, ونكبره ونزبط لونه ونحدد موقعه تحت العنصر وخلص, لكن هم عملو فكرة البيفور والافتر*/
+    content: ''; /*لازم نكتبها عشان يشتغل, حتى لو ما فيها كلام*/
+    position: absolute;  /*الهيرو ريلاتيف فهتكون موقع هالطبقة بالنسباله*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.384);
+}
+
+/* .hero:after{ /*بيعمل عنصر وهمي بعد الهيرو
+
+} */
+
+.hero video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.hero .content{
+    width: 70%;
+    /* background-color: red; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+.hero .content h1{
+    font-size: 60px;
+    margin-bottom: 0;
+}
+.hero .content p{
+    margin-bottom: 30px;
+}
+.hero .content a{
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 8px 15px;
+    border: 2px solid transparent;  /*التنين الهم بوردر لكن بدون لون
+    عشان بعد هيك بدي بالهوفر اغير الالوان*/
+    /*وكمان حتى لو بدون قصة الهوفر, لو عملت واحد اله بوردر وواحد ملوش, بيبين واحد اكبر من التاني, فبنعمل للاول بوردر بدون لون عشان يصيرو نفس الحجم*/
+
+    transition: all .3s ease;
+}
+.hero .content .btn1{
+    background-color: black;
+    border-color: black;
+}
+.hero .content .btn2{
+    border-color: black;
+}
+.hero .content .btn1:hover {
+    background-color: transparent;
+}
+.hero .content .btn2:hover{
+    background-color: black;
+}

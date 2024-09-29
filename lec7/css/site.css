@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+header .logo img{
+    width: 100px;
+}
+header .menu ul{
+    list-style: none;
+}
+header .menu ul a{
+    color: #3b2828;
+    text-decoration: none;
+}
+.hero img{
+    width: 100%;    /*عشان ما يطلعلي السكرول  الي تحت نهائي حتى بالزوم */
+    height: 300px;
+}
+.about-us{
+    background-color: hsl(36, 19%, 84%);
+    padding:60px 0 ;
+}
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+footer a{
+    color: red;
+    text-decoration: none;
+}
